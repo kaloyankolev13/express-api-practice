@@ -10,6 +10,9 @@
     <p><%= comment.comment %> </p>
     <p> Author-<%= comment.username %> </p>
     <a href="/comments">Back</a>
-    <a href="/comments/:id/edit">Edit</a>
+    <a href="/comments/<%= comment.id %>/edit">Edit</a>
+    <form method='POST' action="/comments/<%= comment.id %>?_method=DELETE">
+    <button>Delete</button>
+</form>
   
 </html>
